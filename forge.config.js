@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   packagerConfig: {
     appBundleId: process.env.APP_BUNDLE_ID,
@@ -24,6 +26,7 @@ module.exports = {
     //   tool: 'notarytool',
     //   appleId: process.env.APPLE_ID,
     //   appleIdPassword: process.env.APPLE_ID_APP_PASSWORD,
+    //   teamId: process.env.APPLE_TEAM_ID,
     // },
   },
   makers: [
@@ -43,16 +46,16 @@ module.exports = {
     },
   ],
   //   ---------------- Uncomment to Auto-publish to GitHub ----------------- //
-//   publishers: [
-//     {
-//       name: '@electron-forge/publisher-github',
-//       config: {
-//         repository: {
-//           name: process.env.GITHUB_REPOSITORY_NAME,
-//           owner: process.env.GITHUB_REPOSITORY_OWNER,
-//         },
-//         prerelease: true,
-//       },
-//     },
-//   ],
+  //   publishers: [
+  //     {
+  //       name: '@electron-forge/publisher-github',
+  //       config: {
+  //         repository: {
+  //           name: process.env.GITHUB_REPOSITORY_NAME,
+  //           owner: process.env.GITHUB_REPOSITORY_OWNER,
+  //         },
+  //         prerelease: true,
+  //       },
+  //     },
+  //   ],
 };
