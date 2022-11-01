@@ -1,0 +1,65 @@
+body,
+html,
+webview {
+  width: 100vw;
+  height: 100vh;
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  position: relative;
+}
+#preload-overlay {
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* display: none; */
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  transition-property: all;
+  transition-duration: 700ms;
+  filter: saturate(90%);
+}
+#preload-overlay > svg {
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  transition-property: all;
+  transition-duration: 700ms;
+  transform: translateY(calc(100vh));
+  opacity: 0;
+  /* filter: hue-rotate(-31deg) saturate(150%) brightness(1.13); */
+}
+#owa-icon-letter-container-copy {
+  transform-origin: 30% 50%;
+}
+#electron-frame-left,
+#electron-frame-right {
+  position: absolute;
+  z-index: 98;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(0.8);
+  }
+}
+
+@keyframes ping {
+  75%,
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+} ;
