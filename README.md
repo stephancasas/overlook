@@ -12,6 +12,9 @@ Because a very specific ERP/CRM vendor decided years ago that they weren't going
 
 **[Download the latest release](https://github.com/stephancasas/overlook/releases/latest)**, and open the disk image. Drag Overlook into your **/Applications** directory to complete the installation.
 
+<p align="center"><img src="./asset/readme-installer.png" width="100%"></p>
+
+
 ## Use
 
 Launch the application and sign-in like you would in the browser. That's it. It's just [outlook.office365.com](http://outlook.office365.com) running as a desktop app.
