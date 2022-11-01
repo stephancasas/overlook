@@ -1,4 +1,6 @@
-# Overlook for macOS
+<p align="center"><img src="./asset/readme-header.png" width="100%"></p>
+
+# Overlook
 
 Overlook is Microsoft Outlook if you ordered Microsoft Outlook from [Wish.com](https://www.reddit.com/r/wishwtf/top/?t=all). It is the Outlook Web App (OWA) wrapped inside of an [Electron](https://www.electronjs.org/) app with responders for the `mailto` URL scheme and other niceties that contribute to a native-like experience.
 
