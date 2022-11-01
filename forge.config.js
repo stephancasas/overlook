@@ -16,14 +16,25 @@ module.exports = {
         schemes: ['x-overlook'],
       },
     ],
+    //   -------------- Uncomment to Sign Application for macOS --------------- //
+    // osxSign: {
+    //   identity: process.env.APPLE_DEVELOPER_ID_APPLICATION,
+    // },
+    // osxNotarize: {
+    //   tool: 'notarytool',
+    //   appleId: process.env.APPLE_ID,
+    //   appleIdPassword: process.env.APPLE_ID_APP_PASSWORD,
+    // },
   },
   makers: [
     {
       name: '@electron-forge/maker-zip',
+      enabled: true,
       platforms: ['darwin'],
     },
     {
       name: '@electron-forge/maker-dmg',
+      enabled: true,
       platforms: ['darwin'],
       config: {
         background: 'asset/dmg-background.png',
@@ -31,26 +42,17 @@ module.exports = {
       },
     },
   ],
-//   ----------------- Uncomment to Auto-publish to GitHub ------------------ //
-//     publishers: [
-//       {
-//         name: '@electron-forge/publisher-github',
-//         config: {
-//           repository: {
-//             name: process.env.GITHUB_REPOSITORY_NAME,
-//             owner: process.env.GITHUB_REPOSITORY_OWNER,
-//           },
-//           prerelease: true,
+  //   ---------------- Uncomment to Auto-publish to GitHub ----------------- //
+//   publishers: [
+//     {
+//       name: '@electron-forge/publisher-github',
+//       config: {
+//         repository: {
+//           name: process.env.GITHUB_REPOSITORY_NAME,
+//           owner: process.env.GITHUB_REPOSITORY_OWNER,
 //         },
+//         prerelease: true,
 //       },
-//     ],
-//   --------------- Uncomment to Sign Application for macOS ---------------- //
-//     osxSign: {
-//       identity: process.env.APPLE_DEVELOPER_ID_APPLICATION,
 //     },
-//     osxNotarize: {
-//       tool: 'notarytool',
-//       appleId: process.env.APPLE_ID,
-//       appleIdPassword: process.env.APPLE_ID_APP_PASSWORD,
-//     },
+//   ],
 };
